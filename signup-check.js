@@ -2,7 +2,6 @@
     "use strict";
 
     const BLACKLIST = [
-
         "0815\.ru",
         "0wnd\.net",
         "0wnd\.org",
@@ -556,7 +555,7 @@
     ];
 
     $(function() {
-        const BLACKLIST_REGEX = new RegExp("/.*@(" + BLACKLIST.join('|') + ")$/i");
+        const BLACKLIST_REGEX = new RegExp(".*@(" + BLACKLIST.join('|') + ")$", "i");
 
         $('#subscribe').click(function (e) {
             var email = $('#email').val();
