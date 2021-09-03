@@ -552,8 +552,8 @@
         "zippymail\.info",
         "zoemail\.net",
         "zomg\.info",
-        ".+\.gc.ca",
-        ".+\.gov"
+        "\.gc\.ca",
+        "\.gov"
     ];
 
     $(function() {
