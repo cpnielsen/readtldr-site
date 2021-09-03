@@ -552,10 +552,12 @@
         "zippymail\.info",
         "zoemail\.net",
         "zomg\.info",
+        ".+\.gc.ca",
+        ".+\.gov"
     ];
 
     $(function() {
-        const BLACKLIST_REGEX = new RegExp(".*@(" + BLACKLIST.join('|') + ")$", "i");
+        const BLACKLIST_REGEX = new RegExp(".+@(" + BLACKLIST.join('|') + ")$", "i");
 
         $('#subscribe').click(function (e) {
             var email = $('#email').val();
