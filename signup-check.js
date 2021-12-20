@@ -554,9 +554,9 @@
         "zomg\.info",
         ".+\.gc\.ca",
         ".+\.gov",
-        ".+\.gov\.br",
-        ".+\.gov\.uk",
-        ".+\.gov\.au"
+        "gov\.br",
+        "gov\.uk",
+        "gov\.au"
     ];
 
     const BLOCKWORDS = [
