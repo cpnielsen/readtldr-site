@@ -570,7 +570,7 @@
 
     $(function() {
         $('.email-form').submit(function (e) {
-            var email = $('#email').val();
+            var email = $('.email-input').first().val();
 
             if (BLACKLIST_REGEX.test(email) || BLOCKWORD_REGEX.test(email)) {
                 e.preventDefault();
