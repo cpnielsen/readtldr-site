@@ -553,16 +553,26 @@
         "zoemail\.net",
         "zomg\.info",
         ".+\.gc\.ca",
-        ".+\.gov"
+        ".+\.gov",
+        ".+\.gov\.br",
+        ".+\.gov\.uk",
+        ".+\.gov\.au"
     ];
 
-    $(function() {
-        const BLACKLIST_REGEX = new RegExp(".+@(" + BLACKLIST.join('|') + ")$", "i");
+    const BLOCKWORDS = [
+        "support",
+        "noreploy",
+        "no\-reply"
+    ];
 
+    const BLACKLIST_REGEX = new RegExp(".+@(" + BLACKLIST.join('|') + ")$", "i");
+    const BLOCKWORD_REGEX = new RegExp(".+(" + BLOCKWORDS.join('|') + ").+", "i");
+
+    $(function() {
         $('#subscribe').click(function (e) {
             var email = $('#email').val();
 
-            if (BLACKLIST_REGEX.test(email)) {
+            if (BLACKLIST_REGEX.test(email) || BLOCKWORD_REGEX.test(email)) {
                 e.preventDefault();
                 $('.error-div').fadeIn().delay(3000).fadeOut('slow');
             } else {
