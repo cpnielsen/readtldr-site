@@ -574,7 +574,7 @@
 
             if (BLACKLIST_REGEX.test(email) || BLOCKWORD_REGEX.test(email)) {
                 e.preventDefault();
-                $('.error-div').fadeIn().delay(3000).fadeOut('slow');
+                $('#w-form-fail').fadeIn().delay(3000).fadeOut('slow');
             } else {
                 return 0;
             }
