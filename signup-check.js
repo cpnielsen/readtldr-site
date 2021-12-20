@@ -566,10 +566,10 @@
     ];
 
     const BLACKLIST_REGEX = new RegExp(".+@(" + BLACKLIST.join('|') + ")$", "i");
-    const BLOCKWORD_REGEX = new RegExp(".+(" + BLOCKWORDS.join('|') + ").+", "i");
+    const BLOCKWORD_REGEX = new RegExp(".*(" + BLOCKWORDS.join('|') + ").*", "i");
 
     $(function() {
-        $('#subscribe').click(function (e) {
+        $('.email-form').submit(function (e) {
             var email = $('#email').val();
 
             if (BLACKLIST_REGEX.test(email) || BLOCKWORD_REGEX.test(email)) {
