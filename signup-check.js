@@ -565,7 +565,8 @@
         "noreploy",
         "no\-reply",
         "fdf",
-        "asdf"
+        "asdf",
+        "fuck"
     ];
 
     const BLACKLIST_REGEX = new RegExp(".+@(" + BLACKLIST.join('|') + ")$", "i");
