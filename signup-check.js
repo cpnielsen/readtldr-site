@@ -563,7 +563,9 @@
     const BLOCKWORDS = [
         "support",
         "noreploy",
-        "no\-reply"
+        "no\-reply",
+        "fdf",
+        "info"
     ];
 
     const BLACKLIST_REGEX = new RegExp(".+@(" + BLACKLIST.join('|') + ")$", "i");
